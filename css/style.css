@@ -1,3 +1,8 @@
+/**
+{
+    box-sizing: border-box;
+    outline: 1px red solid;
+}*/
 html
 {
     font-family: sans-serif;
@@ -9,10 +14,6 @@ body
 a
 {
     color: #000000;
-}
-.hide
-{
-    display: none;
 }
 header
 {
@@ -51,7 +52,9 @@ header
     height: 10.2vh;
     padding-left: 22.6em;
     padding-right: 22em;
+    position: relative;
 }
+
 .title-box .menu-icon
 {
     display: flex;
@@ -144,27 +147,55 @@ header
 }
 main
 {
-    padding-left: 14em;
-    padding-right: 14em;
-    margin: 0.5em 0;
+    width: 62%;
+    margin: 0.5em auto;
+    z-index: 2;
+    position: relative;
 }
-.newsletter__ads:nth-child(2)
+.courtain
 {
+    display: none;
+}
+.courtain.active
+{
+    display: block;
     width: 100%;
-    background-position: cover;
+    height: 100vh;
+    background-color: #000a;
+    z-index: 3;
+    position: absolute;
 }
 .nav-list
 {
+    display: none;
     background-color: hsl(210, 11%, 15%);
     color: hsl(0, 0%, 100%);
     font-family: 'Roboto Condensed';
     font-size: 1rem;
     width: 35.4em;
-    z-index: 2;
+    z-index: 5;
     position: absolute;
-    left: 25em;
-    bottom: 20em;
+    left: 22em;
+    top: 6em;
     border-bottom: 3px hsl(0, 100%, 40%) solid;
+}
+.nav-list.active
+{
+    display: block;
+    animation: animationNav 0.3s linear;
+}
+@keyframes animationNav
+{
+    0%
+    {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100%
+    {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 .nav-list svg:nth-child(1)
 {
@@ -200,9 +231,134 @@ main
 {
     border: none;
     background-color: hsl(0, 0%, 20%);
-    color:hsl(0, 0%, 100%);
     font-family: 'Roboto Condensed';
     height: 2.5em;
     width: 32em;
     padding: 0.5em;
+    color:hsl(0, 0%, 100%);
+    font-weight: bold;
+}
+.nav-list__option .text
+{
+    color:hsl(0, 0%, 100%);
+}
+.nav-list__social-media
+{
+    display: flex;
+    flex-direction: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1em;
+    font-size: 0.89rem;
+}
+.nav-list__social-media svg
+{
+    color: hsl(0, 0%, 100%);
+    fill:hsl(0, 0%, 100%);
+    width:50px;
+}
+.nav-list__bottom-links
+{
+    display: flex;
+    flex-direction: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 0 1em 0.9em;
+}
+.nav-list__bottom-links a
+{
+    color: hsl(0, 0%, 100%);
+    font-size: 1rem;
+}
+.ad-top
+{
+    display: flex;
+    flex-direction: row nowrap;
+    justify-content: center;
+}
+.hover-red:hover
+{
+    transition: 0.2s linear;
+    color: hsl(0, 100%, 40%);
+}
+.newsletter
+{
+    margin-top: 1em;
+}
+.newsletter__first-row
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.newsletter__first-row img
+{
+    max-width: 100%;
+    height: auto;
+}
+.newsletter__first-row__article
+{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+.newsletter__first-row .category
+{
+    color:hsl(0, 100%, 40%);
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-top: 1em;
+}
+.newsletter__first-row .title
+{
+    font-size: 2.5rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+.newsletter__first-row .author a
+{
+    display: block;
+    margin-top: 1em;
+    color: hsl(0, 0%, 37%);
+    font-weight: bold;
+    font-size: 0.8rem;
+    margin-bottom: 1em;
+}
+.newsletter__first-row .description
+{
+    font-family: serif;
+    font-size: 1.2rem;
+}
+.newsletter__second-row
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+    margin-top: 1em;
+}
+.newsletter__second-row__element img
+{
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 0.5em;
+}
+.newsletter__second-row__element
+{
+    width: 23%;
+}
+.newsletter__second-row__element a
+{
+    font-weight: bold;
+    text-align: left;
+    font-size: 1.1rem;
+}
+@media screen and (max-width: 1530px)
+{
+    .newsletter__ad img
+    {
+        display: none;
+    }
+    
 }
