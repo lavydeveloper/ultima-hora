@@ -1,0 +1,56 @@
+.title-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $color-primary;
+    height: 10.2vh;
+    padding-left: 22.6em;
+    padding-right: 22em;
+    position: relative;
+  
+  }
+  
+  .title-box__element > h1 {
+	font-family: $font-brand;
+	font-size: 3rem;
+	font-weight: 300;
+	color: hsl(0, 0%, 100%);
+  }
+  
+  .button {
+    border: none;
+    border-radius: 0.25rem;
+    max-width: 100%;
+    padding: 0.5em 0.6em;
+    cursor: pointer;
+  }
+  
+  .title-box__element__sign-in {
+    display: flex;
+    align-items: center;
+    background-color: $grey;
+    font-size: 0.9rem;
+    padding: 0.3em 0.6em;
+  
+    svg {
+      width: 1.8em;
+      height: 1.8em;
+    }
+  }
+  
+  .title-box__element__register {
+    background-color: $color-secondary;
+    font-weight: bold;
+    font-family: $font-secondary;
+    font-style: italic;
+  }
+  
+  .title-box__element.buttons {
+    display: flex;
+    flex-direction: row nowrap;
+    justify-content: space-between;
+  }
+  
+  .buttons-box {
+    margin: 0 0.5em;
+  }

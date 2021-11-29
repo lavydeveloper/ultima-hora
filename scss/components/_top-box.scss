@@ -1,0 +1,24 @@
+.top-box {
+    background-color: $grey;
+    display: flex;
+    flex-direction: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.75rem;
+    font-family: sans-serif;
+    padding-left: 30em;
+    padding-right: 30em;
+    padding-top: 0.7em;
+    padding-bottom: 0.7em;
+  }
+  
+  .top-box__element {
+    span {
+      color: $color-primary;
+      font-weight: bold;
+    }
+  
+    &:nth-child(2) {
+      font-size: 0.7rem;
+    }
+  }

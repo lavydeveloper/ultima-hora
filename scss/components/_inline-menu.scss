@@ -1,0 +1,26 @@
+.nav-inline {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $grey;
+    border-bottom: 3px $grey-darkest solid;
+    height: 4vh;
+    font-size: 0.9rem;
+    font-weight: bold;
+    font-family: $font-primary-condensed;
+    margin-top: 0.3em;
+    padding-left: 25em;
+    padding-right: 25em;
+  }
+  
+  .nav-inline__element {
+    cursor: pointer;
+  
+    svg {
+      &:nth-last-child(1), &:nth-last-child(2) {
+        width: 1.5em;
+        height: 1.5em;
+      }
+    }
+  }
