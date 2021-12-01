@@ -2,11 +2,12 @@ const openNav = document.querySelector(".menu-icon");
 const navList = document.querySelector(".nav-list");
 const opacity = document.querySelector(".courtain");
 
+/*DESPLEGABLE LISTA DE MENÚ*/ 
 openNav.addEventListener("click", () => {
     navList.classList.toggle("active");
     opacity.classList.toggle("active");
 });
-
+/*BARRA DE PROGRESO CON SCROLL*/ 
 window.addEventListener("scroll", () => {
 
     let winScroll = document.documentElement.scrollTop;
@@ -17,3 +18,11 @@ window.addEventListener("scroll", () => {
   
     document.getElementById("progressBar").style.width = scrolled + "%";
 });
+
+/*BURGER MENU*/
+const btn = document.querySelector('.menu-btn')
+
+btn.addEventListener('click', function () {
+  this.classList.toggle('is-active')
+})
+
